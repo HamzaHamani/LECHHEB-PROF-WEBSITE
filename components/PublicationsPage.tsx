@@ -9,7 +9,7 @@ interface PublicationsPageProps {
   theme: string;
   language: string;
   t: (key: string) => string;
-  setCurrentPage: (page: string) => void;
+  setCurrentPage: React.Dispatch<React.SetStateAction<any>>;
   setCurrentItem: (item: any) => void;
 }
 

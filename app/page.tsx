@@ -1,27 +1,27 @@
-"use client"
-import { useState, useEffect } from "react"
-import Head from "next/head"
-import { Moon, Sun, Menu, X } from "lucide-react"
-import Link from "next/link"
-import { HomePage } from "../components/HomePage"
-import { ItemPage } from "../components/ItemPage"
-import { ContactPage } from "../components/ContactPage"
-import { PublicationsPage } from "../components/PublicationsPage"
+"use client";
+import { useState, useEffect } from "react";
+import Head from "next/head";
+import { Moon, Sun, Menu, X } from "lucide-react";
+import Link from "next/link";
+import { HomePage } from "../components/HomePage";
+import { ItemPage } from "../components/ItemPage";
+import { ContactPage } from "../components/ContactPage";
+import { PublicationsPage } from "../components/PublicationsPage";
 
-type Language = "fr" | "en"
-type Theme = "light" | "dark"
-type Page = "home" | "contact" | "item" | "publications"
+type Language = "fr" | "en";
+type Theme = "light" | "dark";
+type Page = "home" | "contact" | "item" | "publications";
 
 interface Translations {
   fr: {
-    [key: string]: string
-  }
+    [key: string]: string;
+  };
   en: {
-    [key: string]: string
-  }
+    [key: string]: string;
+  };
 }
 
-const translations: Translations = {
+export const translations: Translations = {
   fr: {
     title: "Dr. Houda LECHHEB",
     subtitle: "Professeure d'Enseignement Supérieur",
@@ -51,13 +51,16 @@ const translations: Translations = {
     expertise_ethics: "Économie Monétaire et Financière",
     expertise_vision: "Management et Qualité",
     teaching_title: "2. Responsabilités Pédagogiques",
-    teaching_intro: "Responsabilités académiques et pédagogiques à l'Université Ibn Tofail (2015-2024).",
+    teaching_intro:
+      "Responsabilités académiques et pédagogiques à l'Université Ibn Tofail (2015-2024).",
     teaching_desc:
       "Coordination de programmes, participation aux conseils d'établissement, responsabilité de modules et encadrement doctoral.",
     production_title: "3. Production Scientifique",
-    production_intro: "Ouvrages pédagogiques et contributions scientifiques majeures.",
+    production_intro:
+      "Ouvrages pédagogiques et contributions scientifiques majeures.",
     research_title: "4. Publications Scientifiques",
-    research_intro: "Publications dans des revues nationales et internationales indexées.",
+    research_intro:
+      "Publications dans des revues nationales et internationales indexées.",
     recent_publications: "Publications récentes",
     events_title: "5. Évènements passés",
     contact_title: "6. Informations de contact",
@@ -118,13 +121,15 @@ const translations: Translations = {
     expertise_ethics: "Monetary and Financial Economics",
     expertise_vision: "Management and Quality",
     teaching_title: "2. Pedagogical Responsibilities",
-    teaching_intro: "Academic and pedagogical responsibilities at Ibn Tofail University (2015-2024).",
+    teaching_intro:
+      "Academic and pedagogical responsibilities at Ibn Tofail University (2015-2024).",
     teaching_desc:
       "Program coordination, participation in establishment councils, module responsibility and doctoral supervision.",
     production_title: "3. Scientific Production",
     production_intro: "Pedagogical works and major scientific contributions.",
     research_title: "4. Scientific Publications",
-    research_intro: "Publications in indexed national and international journals.",
+    research_intro:
+      "Publications in indexed national and international journals.",
     recent_publications: "Recent Publications",
     events_title: "5. Past Events",
     contact_title: "6. Contact Information",
@@ -156,58 +161,65 @@ const translations: Translations = {
     google_scholar: "Google Scholar",
     orcid: "ORCID",
   },
-}
+};
 
 export default function AcademicWebsite() {
-  const [language, setLanguage] = useState<Language>("fr")
-  const [theme, setTheme] = useState<Theme>("light")
-  const [currentPage, setCurrentPage] = useState<Page>("home")
-  const [currentItem, setCurrentItem] = useState<any>(null)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [language, setLanguage] = useState<Language>("fr");
+  const [theme, setTheme] = useState<Theme>("light");
+  const [currentPage, setCurrentPage] = useState<Page>("home");
+  const [currentItem, setCurrentItem] = useState<any>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Load theme from localStorage on mount
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as Theme
-    const savedLanguage = localStorage.getItem("language") as Language
+    const savedTheme = localStorage.getItem("theme") as Theme;
+    const savedLanguage = localStorage.getItem("language") as Language;
 
     if (savedTheme) {
-      setTheme(savedTheme)
+      setTheme(savedTheme);
     }
     if (savedLanguage) {
-      setLanguage(savedLanguage)
+      setLanguage(savedLanguage);
     }
-  }, [])
+  }, []);
 
   // Apply theme to document
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark")
-    localStorage.setItem("theme", theme)
-  }, [theme])
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   // Save language preference
   useEffect(() => {
-    localStorage.setItem("language", language)
-  }, [language])
+    localStorage.setItem("language", language);
+  }, [language]);
 
-  const t = (key: string) => translations[language][key] || key
+  const t = (key: string) => translations[language][key] || key;
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light")
-  }
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   const toggleLanguage = () => {
-    setLanguage(language === "fr" ? "en" : "fr")
-  }
+    setLanguage(language === "fr" ? "en" : "fr");
+  };
 
   const paperTexture =
     theme === "dark"
       ? "radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(120, 119, 198, 0.02) 0%, transparent 50%)"
-      : "radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.02) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(120, 119, 198, 0.03) 0%, transparent 50%)"
+      : "radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.02) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(120, 119, 198, 0.03) 0%, transparent 50%)";
 
   const renderPage = () => {
     switch (currentPage) {
       case "contact":
-        return <ContactPage theme={theme} language={language} t={t} setCurrentPage={setCurrentPage} />
+        return (
+          <ContactPage
+            theme={theme}
+            language={language}
+            t={t}
+            setCurrentPage={(page: string) => setCurrentPage(page as Page)}
+          />
+        );
       case "publications":
         return (
           <PublicationsPage
@@ -217,9 +229,17 @@ export default function AcademicWebsite() {
             setCurrentPage={setCurrentPage}
             setCurrentItem={setCurrentItem}
           />
-        )
+        );
       case "item":
-        return <ItemPage theme={theme} language={language} t={t} setCurrentPage={setCurrentPage} item={currentItem} />
+        return (
+          <ItemPage
+            theme={theme}
+            language={language}
+            t={t}
+            setCurrentPage={setCurrentPage}
+            item={currentItem}
+          />
+        );
       default:
         return (
           <HomePage
@@ -229,9 +249,9 @@ export default function AcademicWebsite() {
             setCurrentPage={setCurrentPage}
             setCurrentItem={setCurrentItem}
           />
-        )
+        );
     }
-  }
+  };
 
   return (
     <>
@@ -257,13 +277,21 @@ export default function AcademicWebsite() {
               : "Dr. Houda LECHHEB, Public Policies, Health Economics, Ibn Tofail University, Economic Research"
           }
         />
-        <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL || "https://dr-houda-lechheb.com"} />
+        <link
+          rel="canonical"
+          href={
+            process.env.NEXT_PUBLIC_SITE_URL || "https://dr-houda-lechheb.com"
+          }
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div
-        className={`min-h-screen transition-colors duration-300 ${theme === "dark" ? "text-gray-100" : "text-black"}`}
+        className={`min-h-screen transition-colors duration-300 ${
+          theme === "dark" ? "text-gray-100" : "text-black"
+        }`}
         style={{
-          fontFamily: '"Times New Roman", "Liberation Serif", "Nimbus Roman No9 L", serif',
+          fontFamily:
+            '"Times New Roman", "Liberation Serif", "Nimbus Roman No9 L", serif',
           fontWeight: 400,
           backgroundColor: theme === "dark" ? "#111111" : "#ffffff",
           backgroundImage: paperTexture,
@@ -282,7 +310,11 @@ export default function AcademicWebsite() {
               aria-label={mobileMenuOpen ? t("close_menu") : t("menu")}
             >
               <div className="flex items-center justify-center">
-                {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+                {mobileMenuOpen ? (
+                  <X className="w-4 h-4" />
+                ) : (
+                  <Menu className="w-4 h-4" />
+                )}
               </div>
             </button>
           </div>
@@ -297,8 +329,16 @@ export default function AcademicWebsite() {
                   ? "bg-gray-800 border-gray-600 text-gray-200 hover:bg-gray-700 hover:shadow-xl"
                   : "bg-white border-gray-300 text-gray-700 hover:bg-gray-50 hover:shadow-xl"
               }`}
-              title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
-              aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+              title={
+                theme === "light"
+                  ? "Switch to dark mode"
+                  : "Switch to light mode"
+              }
+              aria-label={
+                theme === "light"
+                  ? "Switch to dark mode"
+                  : "Switch to light mode"
+              }
             >
               <div className="flex items-center justify-center">
                 {theme === "light" ? (
@@ -318,10 +358,14 @@ export default function AcademicWebsite() {
                   : "bg-white border-gray-300 text-gray-700 hover:bg-gray-50 hover:shadow-xl"
               }`}
               title={`Switch to ${language === "fr" ? "English" : "French"}`}
-              aria-label={`Switch to ${language === "fr" ? "English" : "French"}`}
+              aria-label={`Switch to ${
+                language === "fr" ? "English" : "French"
+              }`}
             >
               <div className="flex items-center justify-center">
-                <span className="text-xs font-bold">{language.toUpperCase()}</span>
+                <span className="text-xs font-bold">
+                  {language.toUpperCase()}
+                </span>
               </div>
             </button>
           </div>
@@ -386,8 +430,8 @@ export default function AcademicWebsite() {
                 </Link>
                 <button
                   onClick={() => {
-                    setCurrentPage("contact")
-                    setMobileMenuOpen(false)
+                    setCurrentPage("contact");
+                    setMobileMenuOpen(false);
                   }}
                   className="block text-green-600 hover:underline font-normal py-2 text-left w-full"
                 >
@@ -401,5 +445,5 @@ export default function AcademicWebsite() {
         </div>
       </div>
     </>
-  )
+  );
 }
