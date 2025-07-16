@@ -37,7 +37,7 @@ export const publications = [
     hasContent: true,
     hasPdf: false,
     pdfUrl: "",
-    link: "",
+    link: "https://revues.imist.ma/index.php/rpe/article/view/31555",
     isbn: "978-9920-9476-6-4",
   },
   {
@@ -107,7 +107,7 @@ export const publications = [
     categoryType:
       "Articles scientifiques dans des revues spécialisées nationales",
     title: "La Sensibilisation à l'entrepreneuriat : Une lecture théorique",
-    authors: "Lechheb, H.",
+    authors: "Lechheb Houda, Zeineb Frikh, Soraya Obtil",
     year: 2019,
     journal: "Revue Internationale des Sciences de Gestion",
     description:
@@ -118,7 +118,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "",
+    link: "https://revue-isg.com/index.php/home/article/view/211",
     issn: "2665-7473",
   },
   {
@@ -129,7 +129,7 @@ export const publications = [
       "Articles scientifiques dans des revues spécialisées nationales",
     title:
       "Impact Assessment of RAMed Medical Health Insurance on Access to Healthcare Using Instrumental Approach",
-    authors: "Lechheb, H.",
+    authors: "Lechheb Houda, Ouakil Hicham, Jouilil Youness",
     year: 2019,
     journal: "Business and Economic Research",
     description:
@@ -140,7 +140,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "",
+    link: "https://ideas.repec.org/a/mth/ber888/v9y2019i3p150-164.html",
     issn: "2157-8566",
   },
   {
@@ -151,7 +151,7 @@ export const publications = [
       "Articles scientifiques dans des revues spécialisées nationales",
     title:
       "COVID-19 au Maroc : situation sanitaro-épidemiologique et actions de l'État",
-    authors: "Lechheb, H.",
+    authors: "Lechheb Houda, Hicham Ouakik",
     year: 2020,
     journal: "Journal d'Économie, de Management, d'Environnement et de Droit",
     description:
@@ -212,7 +212,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "",
+    link: "https://ijafame.org/index.php/ijafame",
     issn: "2658-8455",
   },
   {
@@ -223,7 +223,7 @@ export const publications = [
       "Articles scientifiques dans des revues spécialisées nationales",
     title:
       "L'impact du parrainage de la CGEM comme acteur de la Diplomatie économique marocaine sur les investissements en Afrique : une analyse empirique",
-    authors: "Lechheb, H.",
+    authors: "Lechheb Houda, Houria Bouya",
     year: 2022,
     journal:
       "International Journal of Accounting, Finance, Auditing, Management & Economics",
@@ -246,7 +246,8 @@ export const publications = [
       "Articles scientifiques dans des revues spécialisées nationales",
     title:
       "Investissements directs étrangers et pollution au Maroc: analyse asymétrique via le modèle NARDL",
-    authors: "Lechheb, H.",
+    authors:
+      "Lechheb Houda, Hicham Ouakil, Hicham el Ouazzani, Abdelhamid Moustabchir ",
     year: 2024,
     journal: "Repères et Perspectives Économiques",
     description:
@@ -257,7 +258,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "",
+    link: "https://revues.imist.ma/index.php/rpe/article/view/56674",
     issn: "2550-469X",
   },
   {
@@ -279,7 +280,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "",
+    link: "https://revues.imist.ma/index.php/AME/article/view/50511",
     issn: "2665-7511",
   },
   {
@@ -301,7 +302,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "https://jpe.iijournals.com/content/22/1",
+    link: "https://www.researchgate.net/publication/329732687_Effect_of_Moroccan_Health_Insurance_on_Individuals%27_Healthcare_Utilization_and_Expenditures_A_Hicket_Model",
     issn: "1096-5572",
   },
   {
@@ -328,7 +329,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "https://jpe.pm-research.com/content/23/1/137",
+    link: "https://www.jstor.org/stable/26864455",
     issn: "1096-5572",
   },
   {
@@ -349,7 +350,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "http://www.testmagzine.biz/index.php/testmagzine/issue/view/9",
+    link: "",
     issn: "0193-4120",
   },
   {
@@ -359,7 +360,7 @@ export const publications = [
     categoryType: "Articles Internationaux Indexés Scopus",
     title:
       "How Management Remains Expanding Its Theoretical Roots To Evolve Serenely",
-    authors: "Lechheb, H.",
+    authors: "Lechheb Houda, Mouna Hajjaj",
     year: 2021,
     journal: "International Journal of Advanced Operations Management",
     description:
@@ -370,7 +371,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "https://www.ijimas.com/upload/issue2/Volume3Issue2HAJJAJMouna.pdf",
+    link: "https://www.inderscienceonline.com/doi/10.1504/IJAOM.2021.113664",
     issn: "",
   },
   {
@@ -391,7 +392,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "https://organization-studies.com",
+    link: "https://openurl.ebsco.com/EPDB%3Agcd%3A15%3A16879951/detailv2?sid=ebsco%3Aplink%3Ascholar&id=ebsco%3Agcd%3A144274956&",
     issn: "2327-9176",
   },
   {
@@ -486,7 +487,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "",
+    link: "https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-8268.12741",
     issn: "",
   },
   {
@@ -507,7 +508,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "http://dx.doi.org/10.19044/esj.2018.vl14n33p156",
+    link: "https://eujournal.org/index.php/esj/article/view/11508",
     issn: "1857-7431",
   },
   {
@@ -527,7 +528,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "doi:10.9790/487X-2011011317e",
+    link: "https://journals.indexcopernicus.com/api/file/viewByFileId/412466",
     issn: "2278-487X",
   },
   {
@@ -548,7 +549,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "http://www.ijser.org",
+    link: "https://www.researchgate.net/publication/342599767_Agile_a_digital_start_for_yet_another_retroversion_of_management_foresight_Its_past_through_factors_of_its_emergence_its_present_reflected_by_its_principles_a_manner_to_apprehend_its_future",
     issn: "2229-5518",
   },
   {
@@ -569,7 +570,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "http://www.oapub.org/soc",
+    link: "https://oapub.org/soc/index.php/EJEFR/article/view/591",
     issn: "2501-9430",
   },
   {
@@ -615,7 +616,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "www.iosrjournals.org",
+    link: "https://www.iosrjournals.org/iosr-jef/papers/Vol11-Issue2/Series-6/F1102064856.pdf",
     issn: "2321-5925",
   },
   {
