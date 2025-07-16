@@ -13,7 +13,6 @@ interface PublicationsPageProps {
   setCurrentItem: (item: any) => void;
 }
 
-// Get current year for footer
 const getCurrentYear = () => new Date().getFullYear();
 
 export function PublicationsPage({
@@ -23,12 +22,10 @@ export function PublicationsPage({
   setCurrentPage,
   setCurrentItem,
 }: PublicationsPageProps) {
-  // Add filter state
   const [filter, setFilter] = useState<
     "all" | "scopus" | "national" | "international"
   >("all");
 
-  // Define the four main category types
   const CATEGORY_TYPES = [
     {
       key: "ouvrages",

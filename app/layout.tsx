@@ -1,14 +1,16 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import ScrollTop from "@/lib/Scrolltop";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dr-asamejd.com"
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dr-asamejd.com";
 
 export const metadata: Metadata = {
-  title: "Dr. asamejd - Professeur en Sciences Informatiques | University of Paris",
+  title:
+    "Dr. asamejd - Professeur en Sciences Informatiques | University of Paris",
   description:
     "Professeur en Sciences Informatiques à l'Université de Paris, spécialisé en intelligence artificielle et apprentissage automatique. Expert en IA, recherche et enseignement.",
   keywords: [
@@ -58,10 +60,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Dr. asamejd - Professeur en Sciences Informatiques",
-    description: "Expert en Intelligence Artificielle et Apprentissage Automatique à l'Université de Paris.",
+    description:
+      "Expert en Intelligence Artificielle et Apprentissage Automatique à l'Université de Paris.",
     images: [`${siteUrl}/og-image.jpg`],
   },
-  canonical: siteUrl,
+
   alternates: {
     canonical: siteUrl,
     languages: {
@@ -74,13 +77,13 @@ export const metadata: Metadata = {
     yandex: "your-yandex-verification-code",
     yahoo: "your-yahoo-verification-code",
   },
-    generator: 'v0.dev'
-}
+  generator: "v0.dev",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="fr">
@@ -134,7 +137,8 @@ export default function RootLayout({
               "@type": "EducationalOrganization",
               name: "Dr. asamejd - Academic Research",
               url: siteUrl,
-              description: "Recherche académique en Intelligence Artificielle et Apprentissage Automatique",
+              description:
+                "Recherche académique en Intelligence Artificielle et Apprentissage Automatique",
               faculty: {
                 "@type": "Person",
                 name: "Dr. asamejd",
@@ -144,7 +148,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ScrollTop />
+        {children}
+      </body>
     </html>
-  )
+  );
 }
