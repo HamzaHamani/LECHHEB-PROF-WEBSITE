@@ -380,7 +380,7 @@ export function HomePage({
               ))}
             </div>
             <div className="flex gap-4 mt-2">
-              <button
+              {/* <button
                 onClick={() => {
                   setCurrentItem(pub);
                   setCurrentPage("item");
@@ -388,8 +388,9 @@ export function HomePage({
                 className="text-green-600 hover:underline text-sm sm:text-base"
               >
                 {t("view_article")}
-              </button>
-              {pub.link && (
+              </button> */}
+
+              {pub.link ? (
                 <a
                   href={pub.link}
                   target="_blank"
@@ -399,6 +400,18 @@ export function HomePage({
                   <ExternalLink className="w-3 h-3" />
                   {language === "fr" ? "Lien externe" : "External link"}
                 </a>
+              ) : (
+                <span
+                  className="text-gray-400 text-sm sm:text-base flex items-center gap-1 cursor-not-allowed select-none"
+                  title={
+                    language === "fr"
+                      ? "Lien externe non disponible"
+                      : "External link not available"
+                  }
+                >
+                  <ExternalLink className="w-3 h-3" />
+                  {language === "fr" ? "Lien externe" : "External link"}
+                </span>
               )}
             </div>
           </div>
