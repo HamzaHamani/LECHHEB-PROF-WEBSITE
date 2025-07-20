@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
 import { generatePageMetadata } from "../../lib/seo";
 
-export const metadata: Metadata = generatePageMetadata(
+export const metadata = generatePageMetadata(
   "publications",
   "Publications Scientifiques - Dr. Houda LECHHEB | Articles de Recherche Économique",
   "Découvrez les publications scientifiques de Dr. Houda LECHHEB, Professeure d'Économie à l'Université Ibn Tofail. Plus de 40 articles de recherche dans des revues internationales indexées Scopus, revues nationales spécialisées RSN, et chapitres d'ouvrages. Spécialités: évaluation d'impact des politiques publiques, économie de la santé, développement économique, modélisation DSGE.",

@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     "Dr. Houda LECHHEB, Professeure d'Enseignement Supérieur en Économie à l'Université Ibn Tofail. Spécialiste en évaluation d'impact des politiques publiques, économie de la santé et développement économique. Plus de 40 publications scientifiques et recherches académiques dans des revues nationales et internationales indexées.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://houdalechheb.netlify.app",
-  ogImage: "/og-image.png",
+  ogImage: "/professor-photo.jpg",
   author: "Dr. Houda LECHHEB",
   keywords: [
     // Primary French keywords
@@ -22,7 +22,7 @@ export const siteConfig = {
     "Économie du développement",
     "Politiques publiques Maroc",
     "Recherche académique économie",
-    
+
     // Primary English keywords
     "Professor Economics",
     "Ibn Tofail University",
@@ -34,22 +34,22 @@ export const siteConfig = {
     "Monetary economics",
     "Academic research economics",
     "Economics professor Morocco",
-    
+
     // Location-based keywords
     "Kénitra",
-    "Maroc", 
+    "Maroc",
     "Morocco",
     "Université Ibn Tofail Kénitra",
     "Economics Morocco university",
-    
+
     // Academic associations
     "AMPP",
-    "AMSE", 
+    "AMSE",
     "MEEA",
     "Association Marocaine Politiques Publiques",
     "Association Marocaine Sciences Économiques",
     "Middle East Economic Association",
-    
+
     // Academic specializations
     "Microéconomie",
     "Macroéconomie",
@@ -63,7 +63,7 @@ export const siteConfig = {
     "University professor",
     "Higher education",
     "Enseignement supérieur",
-    
+
     // Research topics
     "DSGE models",
     "Fiscal policy",
@@ -72,7 +72,7 @@ export const siteConfig = {
     "Politique fiscale",
     "Choc fiscal",
     "Economic impact",
-    "Impact économique"
+    "Impact économique",
   ],
   locale: "fr_MA",
   alternateLocales: ["en_US", "fr_FR"],
@@ -240,8 +240,8 @@ export const generatePageMetadata = (
           url: siteConfig.ogImage,
           width: 1200,
           height: 630,
-          alt: `${siteConfig.name} - Academic Profile`,
-          type: "image/png",
+          alt: `${siteConfig.name} - Professeure d'Économie, Université Ibn Tofail`,
+          type: "image/jpeg",
         },
       ],
     },
@@ -275,8 +275,8 @@ export const generatePageMetadata = (
         "DC.language": "fr-MA",
         "DC.coverage": "Morocco",
         "DC.rights": "© Dr. Houda LECHHEB",
-        "citation_author": "Houda LECHHEB",
-        "citation_author_institution": "Université Ibn Tofail",
+        citation_author: "Houda LECHHEB",
+        citation_author_institution: "Université Ibn Tofail",
       },
     }),
   };
