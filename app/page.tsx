@@ -1,16 +1,15 @@
 "use client";
 import { useState, useEffect } from "react";
-import Head from "next/head";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { HomePage } from "../components/HomePage";
-import { ItemPage } from "../components/ItemPage";
 import { ContactPage } from "../components/ContactPage";
 import { PublicationsPage } from "../components/PublicationsPage";
+import { generateStructuredData } from "../lib/seo";
 
 type Language = "fr" | "en";
 type Theme = "light" | "dark";
-type Page = "home" | "contact" | "item" | "publications";
+type Page = "home" | "contact" | "publications";
 
 interface Translations {
   fr: {
@@ -230,16 +229,6 @@ export default function AcademicWebsite() {
             setCurrentItem={setCurrentItem}
           />
         );
-      case "item":
-        return (
-          <ItemPage
-            theme={theme}
-            language={language}
-            t={t}
-            setCurrentPage={setCurrentPage}
-            item={currentItem}
-          />
-        );
       default:
         return (
           <HomePage
@@ -253,38 +242,16 @@ export default function AcademicWebsite() {
     }
   };
 
+  const structuredData = generateStructuredData("home");
+
   return (
     <>
-      <Head>
-        <title>
-          {language === "fr"
-            ? "Dr. Houda LECHHEB - Professeure d'Enseignement Supérieur"
-            : "Dr. Houda LECHHEB - Professor of Higher Education"}
-        </title>
-        <meta
-          name="description"
-          content={
-            language === "fr"
-              ? "Experte en Évaluation d'Impact des Politiques Publiques et Économie de la Santé à l'Université Ibn Tofail"
-              : "Expert in Impact Evaluation of Public Policies and Health Economics at Ibn Tofail University"
-          }
-        />
-        <meta
-          name="keywords"
-          content={
-            language === "fr"
-              ? "Dr. Houda LECHHEB, Politiques Publiques, Économie de la Santé, Université Ibn Tofail, Recherche Économique"
-              : "Dr. Houda LECHHEB, Public Policies, Health Economics, Ibn Tofail University, Economic Research"
-          }
-        />
-        <link
-          rel="canonical"
-          href={
-            process.env.NEXT_PUBLIC_SITE_URL || "https://dr-houda-lechheb.com"
-          }
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
       <div
         className={`min-h-screen transition-colors duration-300 ${
           theme === "dark" ? "text-gray-100" : "text-black"

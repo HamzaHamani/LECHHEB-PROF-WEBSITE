@@ -39,7 +39,7 @@ export function HomePage({
     : responsibilities.slice(0, 5);
 
   return (
-    <>
+    <main role="main" aria-label="Page d'accueil Dr. Houda LECHHEB">
       {/* Header */}
       <header className="text-center mb-6 sm:mb-8">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-2">
@@ -211,8 +211,8 @@ export function HomePage({
       </nav>
 
       {/* 1. Domaines d'expertise */}
-      <section id="domaines" className="mb-6 sm:mb-8">
-        <h2 className="text-lg sm:text-xl font-medium mb-3 sm:mb-4">
+      <section id="domaines" aria-labelledby="expertise-title" className="mb-6 sm:mb-8">
+        <h2 id="expertise-title" className="text-lg sm:text-xl font-medium mb-3 sm:mb-4">
           {t("expertise_title")}
         </h2>
         <div className="space-y-2 text-sm sm:text-base">
@@ -419,13 +419,13 @@ export function HomePage({
 
         {publications.length > 5 && (
           <div className="text-center mt-6">
-            <button
-              onClick={() => setCurrentPage("publications")}
+            <Link
+              href="/publications"
               className="text-green-600 hover:underline font-medium text-sm sm:text-base"
             >
               {t("show_all")} ({publications.length}{" "}
               {language === "fr" ? "publications" : "publications"})
-            </button>
+            </Link>
           </div>
         )}
       </section>
@@ -538,6 +538,6 @@ export function HomePage({
         </p>
         <p>{t("footer_updated")}</p>
       </footer>
-    </>
+    </main>
   );
 }

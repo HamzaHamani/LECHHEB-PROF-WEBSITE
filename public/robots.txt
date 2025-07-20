@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://houdalechheb.netlify.app/sitemap.xml
+
+# Block access to admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /api/
+Disallow: /.well-known/
+
+# Allow important pages
+Allow: /
+Allow: /publications
+Allow: /contact
+Allow: /en
+Allow: /fr
+
+# Crawl-delay (optional - helps prevent overwhelming the server)
+Crawl-delay: 1
