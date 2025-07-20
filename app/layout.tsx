@@ -71,9 +71,13 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE", // Add your Google Search Console verification
-    yandex: "YOUR_YANDEX_VERIFICATION_CODE", // Optional
-    yahoo: "YOUR_YAHOO_VERIFICATION_CODE", // Optional
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || undefined,
+    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || undefined,
+    other: {
+      ...(process.env.NEXT_PUBLIC_BING_VERIFICATION && {
+        "msvalidate.01": process.env.NEXT_PUBLIC_BING_VERIFICATION,
+      }),
+    },
   },
   alternates: {
     canonical: siteConfig.url,

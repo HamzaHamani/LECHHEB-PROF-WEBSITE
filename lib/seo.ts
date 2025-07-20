@@ -7,36 +7,72 @@ export const siteConfig = {
   ogImage: "/og-image.png",
   author: "Dr. Houda LECHHEB",
   keywords: [
+    // Primary French keywords
     "Houda LECHHEB",
     "Professeure Économie",
-    "Professor Economics",
+    "Professeure d'Enseignement Supérieur",
     "Université Ibn Tofail",
-    "Ibn Tofail University",
-    "Kénitra",
-    "Maroc",
-    "Morocco",
-    "Recherche économique",
-    "Economic research",
-    "Publications scientifiques",
-    "Évaluation d'impact",
-    "Impact evaluation",
-    "Politiques publiques",
-    "Public policies",
-    "Économie de la santé",
-    "Health economics",
+    "Économie Kénitra",
+    "Recherche économique Maroc",
+    "Publications scientifiques économie",
+    "Évaluation d'impact politiques publiques",
+    "Économie de la santé Maroc",
     "Développement économique",
-    "Economic development",
     "Économie monétaire",
+    "Économie du développement",
+    "Politiques publiques Maroc",
+    "Recherche académique économie",
+    
+    // Primary English keywords
+    "Professor Economics",
+    "Ibn Tofail University",
+    "Economic research Morocco",
+    "Health economics",
+    "Public policy evaluation",
+    "Impact evaluation",
+    "Development economics",
     "Monetary economics",
-    "Finance",
-    "Academic research",
-    "Économiste",
-    "Economist",
+    "Academic research economics",
+    "Economics professor Morocco",
+    
+    // Location-based keywords
+    "Kénitra",
+    "Maroc", 
+    "Morocco",
+    "Université Ibn Tofail Kénitra",
+    "Economics Morocco university",
+    
+    // Academic associations
     "AMPP",
-    "AMSE",
+    "AMSE", 
     "MEEA",
+    "Association Marocaine Politiques Publiques",
+    "Association Marocaine Sciences Économiques",
+    "Middle East Economic Association",
+    
+    // Academic specializations
     "Microéconomie",
     "Macroéconomie",
+    "Microeconomics",
+    "Macroeconomics",
+    "Finance",
+    "Économiste",
+    "Economist",
+    "Academic publications",
+    "Scientific research",
+    "University professor",
+    "Higher education",
+    "Enseignement supérieur",
+    
+    // Research topics
+    "DSGE models",
+    "Fiscal policy",
+    "Economic modeling",
+    "Modélisation économique",
+    "Politique fiscale",
+    "Choc fiscal",
+    "Economic impact",
+    "Impact économique"
   ],
   locale: "fr_MA",
   alternateLocales: ["en_US", "fr_FR"],
@@ -168,23 +204,44 @@ export const generatePageMetadata = (
     ? [...siteConfig.keywords, ...keywords]
     : siteConfig.keywords;
 
+  const pageUrl = `${siteConfig.url}${page === "home" ? "" : `/${page}`}`;
+
   return {
-    title: baseTitle,
+    title: {
+      default: baseTitle,
+      template: `%s | ${siteConfig.name}`,
+    },
     description: baseDescription,
     keywords: pageKeywords,
+    authors: [{ name: siteConfig.author }],
+    creator: siteConfig.author,
+    publisher: "Université Ibn Tofail",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
     openGraph: {
+      type: page === "publications" ? "article" : "website",
+      locale: siteConfig.locale,
+      alternateLocale: siteConfig.alternateLocales,
       title: baseTitle,
       description: baseDescription,
-      url: `${siteConfig.url}${page === "home" ? "" : `/${page}`}`,
-      type: "website",
-      locale: siteConfig.locale,
+      url: pageUrl,
       siteName: siteConfig.name,
       images: [
         {
           url: siteConfig.ogImage,
           width: 1200,
           height: 630,
-          alt: siteConfig.name,
+          alt: `${siteConfig.name} - Academic Profile`,
+          type: "image/png",
         },
       ],
     },
@@ -193,14 +250,35 @@ export const generatePageMetadata = (
       title: baseTitle,
       description: baseDescription,
       images: [siteConfig.ogImage],
+      creator: "@houdalechheb",
+      site: "@houdalechheb",
     },
     alternates: {
-      canonical: `${siteConfig.url}${page === "home" ? "" : `/${page}`}`,
+      canonical: pageUrl,
       languages: {
-        "fr-MA": `${siteConfig.url}${page === "home" ? "" : `/${page}`}`,
+        "fr-MA": pageUrl,
         "en-US": `${siteConfig.url}/en${page === "home" ? "" : `/${page}`}`,
+        "fr-FR": pageUrl,
+        "x-default": pageUrl,
       },
     },
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+      bing: process.env.NEXT_PUBLIC_BING_VERIFICATION,
+    },
+    category: "Education",
+    classification: "Academic Profile",
+    ...(page === "publications" && {
+      other: {
+        "DC.type": "Collection",
+        "DC.format": "text/html",
+        "DC.language": "fr-MA",
+        "DC.coverage": "Morocco",
+        "DC.rights": "© Dr. Houda LECHHEB",
+        "citation_author": "Houda LECHHEB",
+        "citation_author_institution": "Université Ibn Tofail",
+      },
+    }),
   };
 };
 

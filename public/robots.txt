@@ -4,19 +4,45 @@ Allow: /
 # Sitemaps
 Sitemap: https://houdalechheb.netlify.app/sitemap.xml
 
-# Block access to admin or private areas (if any)
+# Academic crawler optimization
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot  
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Academic search engines
+User-agent: ScholarBot
+Allow: /
+Allow: /publications
+
+User-agent: CiteSeerXBot
+Allow: /
+Allow: /publications
+
+# Block access to admin or private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /_next/
 Disallow: /api/
 Disallow: /.well-known/
+Disallow: /*.json$
 
-# Allow important pages
+# Allow important pages for academic indexing
 Allow: /
 Allow: /publications
 Allow: /contact
 Allow: /en
 Allow: /fr
+
+# Cache directives
+# Host: houdalechheb.netlify.app
 
 # Crawl-delay (optional - helps prevent overwhelming the server)
 Crawl-delay: 1
