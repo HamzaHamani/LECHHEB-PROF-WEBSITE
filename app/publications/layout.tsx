@@ -19,8 +19,8 @@ export const metadata: Metadata = generatePageMetadata(
     "modélisation DSGE",
     "choc fiscal Maroc",
     "évaluation impact",
-    
-    // English academic keywords  
+
+    // English academic keywords
     "Houda LECHHEB publications",
     "economics research papers",
     "Scopus indexed articles economics",
@@ -31,19 +31,19 @@ export const metadata: Metadata = generatePageMetadata(
     "Ibn Tofail University publications",
     "academic publications economics",
     "scientific articles economics",
-    
+
     // Academic databases
     "Google Scholar",
     "ResearchGate",
     "ORCID",
     "Scopus",
     "Web of Science",
-    
+
     // Institution keywords
     "Université Ibn Tofail recherche",
     "Ibn Tofail University research",
     "Kénitra université publications",
-    "Morocco university economics"
+    "Morocco university economics",
   ]
 );
 
