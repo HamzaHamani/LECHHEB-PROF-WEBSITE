@@ -27,17 +27,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
-    {
-      url: `${siteConfig.url}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.5,
-      alternates: {
-        languages: {
-          fr: `${siteConfig.url}/contact`,
-          en: `${siteConfig.url}/en/contact`,
-        },
-      },
-    },
   ];
 }
