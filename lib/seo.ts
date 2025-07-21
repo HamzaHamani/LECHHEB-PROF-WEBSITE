@@ -3,15 +3,52 @@ export const siteConfig = {
   title: "Dr. Houda LECHHEB - Professeure d'Économie | Professor of Economics",
   description:
     "Dr. Houda LECHHEB, Professeure d'Enseignement Supérieur en Économie à l'Université Ibn Tofail. Spécialiste en évaluation d'impact des politiques publiques, économie de la santé et développement économique. Plus de 40 publications scientifiques et recherches académiques dans des revues nationales et internationales indexées.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://houdalechheb.netlify.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://houdalechheb.com",
   ogImage: "/professor-photo.jpg",
   author: "Dr. Houda LECHHEB",
   keywords: [
-    // Primary French keywords
+    // Name variations - TOP PRIORITY for #1 ranking
     "Houda LECHHEB",
+    "LECHHEB Houda",
+    "Prof Houda LECHHEB",
+    "Professeure Houda LECHHEB",
+    "Dr Houda LECHHEB",
+    "Houda LECHHEB FEGK",
+    "LECHHEB FEGK",
+    "FEGK Houda",
+    "Houda FEGK",
+    "Professor Houda LECHHEB",
+    "Docteur Houda LECHHEB",
+    "houdalechheb",
+    "houda lechheb",
+    "lechheb houda",
+    "prof houda fegk",
+    "lechheb fegk",
+
+    // Academic titles with name
+    "Professeure Houda LECHHEB Ibn Tofail",
+    "Prof Houda LECHHEB Économie",
+    "Dr Houda LECHHEB Université Ibn Tofail",
+    "Houda LECHHEB Professeure d'Enseignement Supérieur",
+    "Houda LECHHEB Economics Professor",
+    "Professor Houda LECHHEB Morocco",
+
+    // Institution combinations
+    "Houda LECHHEB Université Ibn Tofail",
+    "Houda LECHHEB Ibn Tofail University",
+    "LECHHEB Ibn Tofail",
+    "Prof Houda Ibn Tofail",
+    "Houda LECHHEB FEGK Ibn Tofail",
+    "Professeure Économie Ibn Tofail Houda",
+    "Ibn Tofail University Houda LECHHEB",
+    "Université Ibn Tofail Houda LECHHEB",
+
+    // Core academic keywords
     "Professeure Économie",
     "Professeure d'Enseignement Supérieur",
     "Université Ibn Tofail",
+    "FEGK Ibn Tofail",
+    "Faculté Sciences Économiques Ibn Tofail",
     "Économie Kénitra",
     "Recherche économique Maroc",
     "Publications scientifiques économie",
@@ -23,7 +60,7 @@ export const siteConfig = {
     "Politiques publiques Maroc",
     "Recherche académique économie",
 
-    // Primary English keywords
+    // English keywords
     "Professor Economics",
     "Ibn Tofail University",
     "Economic research Morocco",
@@ -88,27 +125,73 @@ export const generateStructuredData = (page: string = "home") => {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Dr. Houda LECHHEB",
-    alternateName: "Houda LECHHEB",
+    alternateName: [
+      "Houda LECHHEB",
+      "LECHHEB Houda",
+      "Prof Houda LECHHEB",
+      "Professeure Houda LECHHEB",
+      "Dr Houda LECHHEB",
+      "Houda LECHHEB FEGK",
+      "LECHHEB FEGK",
+      "FEGK Houda",
+      "Houda FEGK",
+      "Professor Houda LECHHEB",
+      "Docteur Houda LECHHEB",
+    ],
+    givenName: "Houda",
+    familyName: "LECHHEB",
+    additionalName: "FEGK",
+    honorificPrefix: ["Dr.", "Prof.", "Professeure"],
+    honorificSuffix: "PhD",
     jobTitle: [
       "Professeure d'Enseignement Supérieur",
       "Professor of Economics",
+      "Professeure d'Économie",
+      "Economics Professor",
+      "Prof Économie",
+      "Économiste",
     ],
+    description:
+      "Dr. Houda LECHHEB is a Professor of Economics at Ibn Tofail University, specializing in impact evaluation of public policies, health economics, and economic development. Expert researcher with over 40 scientific publications.",
+    disambiguatingDescription:
+      "Professor Houda LECHHEB (FEGK) - Leading economist at Université Ibn Tofail, Morocco, specializing in public policy evaluation and health economics research.",
     affiliation: {
       "@type": "Organization",
       name: "Université Ibn Tofail",
-      alternateName: "Ibn Tofail University",
+      alternateName: ["Ibn Tofail University", "UIT", "جامعة ابن طفيل"],
       url: "https://www.uit.ac.ma/",
+      department: {
+        "@type": "Organization",
+        name: "Faculté des Sciences Économiques et de Gestion",
+        alternateName: "FEGK",
+      },
       address: {
         "@type": "PostalAddress",
         addressLocality: "Kénitra",
+        addressRegion: "Rabat-Salé-Kénitra",
         addressCountry: "MA",
+        addressCountryName: "Morocco",
       },
     },
     url: siteConfig.url,
+    mainEntityOfPage: siteConfig.url,
+    identifier: [
+      {
+        "@type": "PropertyValue",
+        name: "ORCID",
+        value: process.env.NEXT_PUBLIC_ORCID_ID,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Google Scholar",
+        value: process.env.NEXT_PUBLIC_GOOGLE_SCHOLAR_ID,
+      },
+    ],
     sameAs: [
       siteConfig.social.researchgate,
       siteConfig.social.googleScholar,
       siteConfig.social.orcid,
+      "https://houdalechheb.com",
     ],
     knowsAbout: [
       "Economics",

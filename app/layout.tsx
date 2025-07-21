@@ -34,8 +34,48 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  // Enhanced meta tags for name-based search optimization
+  other: {
+    // Name variations for search engines
+    author: "Dr. Houda LECHHEB",
+    person: "Houda LECHHEB",
+    professor: "Houda LECHHEB",
+    academic: "Prof Houda LECHHEB",
+    researcher: "Dr Houda LECHHEB FEGK",
+    economist: "Houda LECHHEB Economics",
+    faculty: "Professeure Houda LECHHEB Ibn Tofail",
+
+    // Academic search optimization
+    citation_author: "Houda LECHHEB",
+    citation_author_institution: "Université Ibn Tofail",
+    citation_author_email:
+      process.env.NEXT_PUBLIC_CONTACT_EMAIL || "houda.lechheb@uit.ac.ma",
+    "DC.creator": "Dr. Houda LECHHEB",
+    "DC.contributor": "Houda LECHHEB",
+    "DC.subject": "Economics, Public Policy, Health Economics",
+    "DC.publisher": "Université Ibn Tofail",
+
+    // Professional identity optimization
+    "profile:first_name": "Houda",
+    "profile:last_name": "LECHHEB",
+    "profile:username": "houdalechheb",
+    "article:author": "Dr. Houda LECHHEB",
+
+    // Institution optimization
+    institution: "Université Ibn Tofail",
+    department: "Faculté des Sciences Économiques et de Gestion",
+    location: "Kénitra, Morocco",
+    university: "Ibn Tofail University",
+
+    // Search priority tags
+    importance: "high",
+    priority: "1",
+    "canonical-name": "Houda LECHHEB",
+    "primary-affiliation": "Université Ibn Tofail",
+    "academic-rank": "Professeure d'Enseignement Supérieur",
+  },
   openGraph: {
-    type: "website",
+    type: "profile",
     locale: siteConfig.locale,
     alternateLocale: siteConfig.alternateLocales,
     url: siteConfig.url,

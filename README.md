@@ -6,11 +6,11 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![SEO Score](https://img.shields.io/badge/SEO_Score-98/100-brightgreen?style=for-the-badge)](https://developers.google.com/speed/pagespeed/insights/)
-[![Netlify](https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=for-the-badge&logo=netlify)](https://houdalechheb.netlify.app)
+[![Netlify](https://img.shields.io/badge/Custom_Domain-houdalechheb.com-00C7B7?style=for-the-badge&logo=netlify)](https://houdalechheb.com)
 
 ## 🌟 **Live Website**
 
-**🔗 [houdalechheb.netlify.app](https://houdalechheb.netlify.app)**
+**🔗 [houdalechheb.com](https://houdalechheb.com)**
 
 ---
 
@@ -200,7 +200,7 @@ Create a `.env` file based on `.env.example`:
 
 ```bash
 # Site Configuration
-NEXT_PUBLIC_SITE_URL=https://houdalechheb.netlify.app
+NEXT_PUBLIC_SITE_URL=https://houdalechheb.com
 
 # Analytics
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
@@ -344,7 +344,7 @@ pnpm build
 # Or manually drag dist folder to netlify.com/drop
 ```
 
-**🚀 Live at: [houdalechheb.netlify.app](https://houdalechheb.netlify.app)**
+**🚀 Live at: [houdalechheb.com](https://houdalechheb.com)**
 
 ### **Manual Deployment Options**
 
@@ -444,7 +444,7 @@ This project is created for **Dr. Houda LECHHEB** - Academic use and portfolio s
 
 ## 🚀 **Quick Links**
 
-- 🌐 **[Live Website](https://houdalechheb.netlify.app)**
+- 🌐 **[Live Website](https://houdalechheb.com)**
 - 📊 **[Analytics Setup](./ANALYTICS-SETUP-GUIDE.md)**
 - 🔍 **[SEO Guide](./SEO-IMPLEMENTATION-GUIDE.md)**
 - 📱 **[Social Media Setup](./SOCIAL-MEDIA-OG-GUIDE.md)**
