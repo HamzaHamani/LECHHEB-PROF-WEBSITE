@@ -130,6 +130,17 @@ export const metadata: Metadata = {
     },
   },
   category: "Education",
+  // Next.js App Router will automatically detect favicon.ico and apple-icon.png from app/ directory
+  // But we also define them explicitly for better control
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.ico", sizes: "16x16", type: "image/x-icon" },
+      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -149,8 +160,28 @@ export default function RootLayout({
         <link rel="sitemap" href="/sitemap.xml" />
         <link rel="robots" href="/robots.txt" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        {/* Favicon declarations for better Google indexing - keeping both Next.js auto + manual */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+
+        {/* Next.js App Router will auto-generate additional apple-icon meta tags from app/apple-icon.png */}
+
+        {/* Additional meta for search engines */}
+        <meta name="msapplication-TileImage" content="/favicon.ico" />
+        <meta name="theme-color" content="#1e40af" />
+
+        {/* Force search engines to recognize favicon */}
+        <meta name="msapplication-TileColor" content="#1e40af" />
+        <meta name="application-name" content="Dr. Houda LECHHEB" />
+        <meta
+          name="msapplication-tooltip"
+          content="Dr. Houda LECHHEB - Professeure d'Économie"
+        />
 
         {/* Enhanced Social Media Meta Tags */}
         <meta

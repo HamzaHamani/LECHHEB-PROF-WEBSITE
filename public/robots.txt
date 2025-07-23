@@ -2,7 +2,12 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://houdalechheb.netlify.app/sitemap.xml
+Sitemap: https://houdalechheb.com/sitemap.xml
+
+# Important resources for search engines
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /manifest.json
 
 # Academic crawler optimization
 User-agent: Googlebot
