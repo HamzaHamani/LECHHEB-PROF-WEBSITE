@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Dr. Houda LECHHEB",
-  title: "Dr. Houda LECHHEB - Professeure d'Économie | Professor of Economics",
+  title: "Dr. Houda LECHHEB - Professeure d'Économie Ibn Tofail",
   description:
-    "Dr. Houda LECHHEB, Professeure d'Enseignement Supérieur en Économie à l'Université Ibn Tofail. Spécialiste en évaluation d'impact des politiques publiques, économie de la santé et développement économique. Plus de 40 publications scientifiques et recherches académiques dans des revues nationales et internationales indexées.",
+    "Dr. Houda LECHHEB, Professeure d'Économie à l'Université Ibn Tofail. Spécialiste en évaluation des politiques publiques et économie de la santé",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://houdalechheb.com",
   ogImage: "/professor-photo.jpg",
   author: "Dr. Houda LECHHEB",

@@ -122,14 +122,7 @@ export const metadata: Metadata = {
       }),
     },
   },
-  alternates: {
-    canonical: siteConfig.url,
-    languages: {
-      "fr-MA": siteConfig.url,
-      "en-US": `${siteConfig.url}/en`,
-      "fr-FR": `${siteConfig.url}/fr`,
-    },
-  },
+
   category: "Education",
   // Next.js App Router will automatically detect favicon.ico and apple-icon.png from app/ directory
   // But we also define them explicitly for better control

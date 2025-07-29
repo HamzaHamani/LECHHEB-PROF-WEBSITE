@@ -390,7 +390,7 @@ export default function AcademicWebsite() {
                 </Link>
                 <Link
                   href="#evenements"
-                  className="block text-green-600 hover:underline font-normal py-2"
+                  className="block text-green-600 hover:underline font-normal py-2 "
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t("nav_events")}
