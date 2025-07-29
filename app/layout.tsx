@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { siteConfig, generateStructuredData } from "../lib/seo";
 import { generateSocialMetaTags } from "../lib/social-meta";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -263,30 +264,6 @@ export default function RootLayout({
           content="Economics, Health Economics, Public Policy, Development Economics"
         />
 
-        {/* Google Analytics */}
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
-                    page_location: window.location.href,
-                    page_title: document.title,
-                    anonymize_ip: true,
-                  });
-                `,
-              }}
-            />
-          </>
-        )}
-
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -321,6 +298,18 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className} suppressHydrationWarning>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BJ7KE7K3J7"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BJ7KE7K3J7');
+          `}
+        </Script>
         {children}
       </body>
     </html>

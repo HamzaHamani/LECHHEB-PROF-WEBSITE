@@ -83,6 +83,19 @@ export function HomePage({
             <ExternalLink className="w-4 h-4" />
             {t("orcid")}
           </a>
+          <a
+            href="https://www.youtube.com/@lechhebhouda"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center gap-2 px-3 py-2 rounded-lg border transition-colors text-sm ${
+              theme === "dark"
+                ? "border-gray-600 text-gray-300 hover:bg-gray-800"
+                : "border-gray-300 text-gray-700 hover:bg-gray-50"
+            }`}
+          >
+            <ExternalLink className="w-4 h-4" />
+            YouTube
+          </a>
         </div>
 
         {/* Desktop Navigation */}
@@ -147,6 +160,7 @@ export function HomePage({
             <img
               src="/professor-photo.jpg"
               alt="Dr. Houda LECHHEB"
+              title="Dr. Houda LECHHEB portrait"
               className="w-24 h-32 sm:w-32 sm:h-40 object-cover border-2 border-gray-400 rounded mx-auto"
             />
           </div>
@@ -211,8 +225,15 @@ export function HomePage({
       </nav>
 
       {/* 1. Domaines d'expertise */}
-      <section id="domaines" aria-labelledby="expertise-title" className="mb-6 sm:mb-8">
-        <h2 id="expertise-title" className="text-lg sm:text-xl font-medium mb-3 sm:mb-4">
+      <section
+        id="domaines"
+        aria-labelledby="expertise-title"
+        className="mb-6 sm:mb-8"
+      >
+        <h2
+          id="expertise-title"
+          className="text-lg sm:text-xl font-medium mb-3 sm:mb-4"
+        >
           {t("expertise_title")}
         </h2>
         <div className="space-y-2 text-sm sm:text-base">
