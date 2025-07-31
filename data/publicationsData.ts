@@ -22,25 +22,6 @@ export const publications = [
     isbn: "978-9920-9476-0-2",
   },
   {
-    id: 2,
-    type: "publication",
-    category: "ouvrage",
-    categoryType: "Articles d'Ouvrages",
-    title:
-      "Les effets macroéconomiques du choc fiscal au Maroc : Une analyse DSGE",
-    authors: "Lechheb, H.",
-    year: 2024,
-    journal: "Développement inclusif : Réalités et perspectives",
-    description: "Étude des effets du choc fiscal au Maroc via un modèle DSGE.",
-    shortDescription: "Analyse DSGE de l'impact fiscal au Maroc.",
-    tags: ["Macroéconomie", "Choc fiscal", "DSGE"],
-    hasContent: true,
-    hasPdf: false,
-    pdfUrl: "",
-    link: "https://revues.imist.ma/index.php/rpe/article/view/31555",
-    isbn: "978-9920-9476-6-4",
-  },
-  {
     id: 3,
     type: "publication",
     category: "ouvrage",
@@ -87,12 +68,13 @@ export const publications = [
     category: "ouvrage",
     categoryType: "Articles d'Ouvrages",
     title: "Awqaf-led green finance: a technical know-how",
-    authors:
-      "Nor Razinah Mohd. Zain, Oumaima Tounchibine, Azman Mohd Noor, Houda Lechheb",
+    authors: "Lechheb, H. ",
     year: 2025,
     journal: "Islamic Green Finance",
-    description: "Chapitre sur le financement vert à travers les Awqaf.",
-    shortDescription: "Chapitre sur la finance verte basée sur les Awqaf.",
+    description:
+      " Chapitre 14 |15 pages -Chapitre sur le financement vert à travers les Awqaf.",
+    shortDescription:
+      "Chapitre 14 |15 pages - Chapitre sur la finance verte basée sur les Awqaf.",
     tags: ["Finance verte", "Awqaf", "Finance islamique"],
     hasContent: true,
     hasPdf: false,
@@ -107,7 +89,7 @@ export const publications = [
     categoryType:
       "Articles scientifiques dans des revues spécialisées nationales",
     title: "La Sensibilisation à l'entrepreneuriat : Une lecture théorique",
-    authors: "Lechheb Houda, Zeineb Frikh, Soraya Obtil",
+    authors: "Lechheb, H. Frikh, Z. Obtil, S.",
     year: 2019,
     journal: "Revue Internationale des Sciences de Gestion",
     description:
@@ -129,7 +111,7 @@ export const publications = [
       "Articles scientifiques dans des revues spécialisées nationales",
     title:
       "Impact Assessment of RAMed Medical Health Insurance on Access to Healthcare Using Instrumental Approach",
-    authors: "Lechheb Houda, Ouakil Hicham, Jouilil Youness",
+    authors: "Lechheb, H. Ouakil, H. Jouilil, Y.",
     year: 2019,
     journal: "Business and Economic Research",
     description:
@@ -151,7 +133,7 @@ export const publications = [
       "Articles scientifiques dans des revues spécialisées nationales",
     title:
       "COVID-19 au Maroc : situation sanitaro-épidemiologique et actions de l'État",
-    authors: "Lechheb Houda, Hicham Ouakik",
+    authors: "Lechheb, H. Ouakil, H",
     year: 2020,
     journal: "Journal d'Économie, de Management, d'Environnement et de Droit",
     description:
@@ -212,7 +194,7 @@ export const publications = [
     hasContent: true,
     hasPdf: true,
     pdfUrl: "/placeholder-pdf.pdf",
-    link: "https://ijafame.org/index.php/ijafame",
+    link: "",
     issn: "2658-8455",
   },
   {
@@ -291,7 +273,7 @@ export const publications = [
       "Articles scientifiques dans des revues spécialisées nationales",
     title:
       "Effect of Moroccan Health Insurance on Individual’s Healthcare Utilization and Expenditures: A Hicket Model",
-    authors: "Lechheb, H.",
+    authors: "Lechheb, H.  Jouilil, Y.",
     year: 2018,
     journal: "Journal of Private Equity",
     description:
@@ -313,7 +295,7 @@ export const publications = [
       "Articles scientifiques dans des revues spécialisées nationales",
     title:
       "Economic Growth, Poverty and Income Inequality: What Implications for Lower and Middle Income Countries in the Era of Globalization",
-    authors: "Lechheb, H.",
+    authors: "Lechheb, H. Ouakil, H. Jouilil, Y.",
     year: 2019,
     journal: "Journal of Private Equity",
     description:
@@ -381,7 +363,7 @@ export const publications = [
     categoryType: "Articles Internationaux Indexés Scopus",
     title:
       "Understanding The Whys And The Wherefores Of Managerial Innovation In Morocco",
-    authors: "Lechheb, H.",
+    authors: "Lechheb, H. Hajjaj, M.",
     year: 2020,
     journal: "Change Management: An International Journal",
     description:
@@ -423,7 +405,7 @@ export const publications = [
     categoryType: "Articles Internationaux Indexés Scopus",
     title:
       "The Appropriation of the Agile Approach in Public Sector: Modeling the Achievement of Good Governance",
-    authors: "Lechheb, H.",
+    authors: "Lechheb, H. Hajjaj, M. Ouakil, H.",
     year: 2020,
     journal:
       "ENSAM-Rabat Organizes in cooperation with ICESCO The 4th Edition of the International Conference on Advanced Intelligent Systems for Sustainable Development (AI2SD’2022)",
@@ -450,7 +432,7 @@ export const publications = [
     categoryType: "Articles Internationaux Indexés Scopus",
     title:
       "Co-construction of a New Management Approach in a Public Research Funding Agency through the Contextualization of Agile Thinking",
-    authors: "Lechheb, H.",
+    authors: "Lechheb, H. Hajjaj, M.",
     year: 2021,
     journal: "Organization Culture: An International Journal",
     description:
@@ -538,7 +520,7 @@ export const publications = [
     categoryType: "Articles Internationaux Indexés",
     title:
       "Agile: A Digital Start for Yet Another Retroversion of Management Foresight Its Past, Through Factors of Its Emergence, Its Present Reflected by Its Principals: A Manner to Apprehend Its Future",
-    authors: "Lechheb, H.",
+    authors: "Lechheb, H. Hajjaj, M.",
     year: 2019,
     journal: "International Journal of Science & Engineering Research",
     description:
@@ -579,7 +561,7 @@ export const publications = [
     category: "international",
     categoryType: "Articles Internationaux Indexés",
     title: "When the Pandemic Makes Us Aware of the Importance of Agility",
-    authors: "Lechheb, H.",
+    authors: "Lechheb, H. Hajjaj, M.",
     year: 2020,
     journal: "International Journal of Innovation and Modern Applied Science",
     description:
@@ -646,8 +628,8 @@ export const publications = [
     category: "international",
     categoryType: "Articles Internationaux Indexés",
     title:
-      "La Politique Budgétaire Face à la Crise Sanitaire : Une Simulation Utilisant un Modèle Hybride DSGE SIR",
-    authors: "Lechheb, H.",
+      "Fiscal policy in the face of the health crisis: A simulation using a hybrid DSGE-SIR model",
+    authors: "Lechheb, H. Ouakil, H. Moustabchir, A. Ouazzani, H.",
     year: 2024,
     journal: "African Development Review",
     description:
