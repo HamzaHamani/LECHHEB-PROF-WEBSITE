@@ -90,6 +90,10 @@ export const translations: Translations = {
     show_less: "Voir moins",
     google_scholar: "Google Scholar",
     orcid: "ORCID",
+    contact_intro_text:
+      "Si vous avez des questions ou souhaitez collaborer avec moi, n'hésitez pas à me contacter via le formulaire ci-dessous :",
+    contact_button_text: "Contactez-moi",
+    contact_form_title: "Formulaire de Contact",
   },
   en: {
     title: "Dr. Houda LECHHEB",
@@ -159,6 +163,10 @@ export const translations: Translations = {
     show_less: "Show Less",
     google_scholar: "Google Scholar",
     orcid: "ORCID",
+    contact_intro_text:
+      "If you have any questions or would like to collaborate with me, please feel free to contact me through the form below:",
+    contact_button_text: "Contact Me",
+    contact_form_title: "Contact Form",
   },
 };
 
