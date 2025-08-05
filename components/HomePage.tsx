@@ -483,7 +483,9 @@ export function HomePage({
                   }
                 >
                   <ExternalLink className="w-3 h-3" />
-                  {language === "fr" ? "Lien externe" : "External link"}
+                  {language === "fr"
+                    ? "Accéder à la publication"
+                    : "Access publication"}
                 </span>
               )}
             </div>
