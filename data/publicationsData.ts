@@ -42,46 +42,7 @@ export const publications = [
     link: "",
     isbn: "978-9920-9476-6-4",
   },
-  {
-    id: 4,
-    type: "publication",
-    category: "ouvrage",
-    categoryType: "Articles d'Ouvrages",
-    title:
-      "Sustainable Agriculture and Islamic Finance: Cultivating Prosperity and Values",
-    authors: "Nor Razinah Mohd. Zain, Oumaima Tounchibine, Houda Lechheb",
-    year: 2024,
-    journal: "Emerald Publishing Limited",
-    description: "Chapitre sur l’agriculture durable et la finance islamique.",
-    shortDescription:
-      "Chapitre dans un ouvrage sur la finance islamique et l’agriculture durable.",
-    tags: ["Finance islamique", "Agriculture durable"],
-    hasContent: true,
-    hasPdf: false,
-    pdfUrl: "",
-    link: "https://doi.org/10.1108/978-1-83549-906-120241010",
-    isbn: "",
-  },
-  {
-    id: 5,
-    type: "publication",
-    category: "ouvrage",
-    categoryType: "Articles d'Ouvrages",
-    title: "Awqaf-led green finance: a technical know-how",
-    authors: "Lechheb, H. ",
-    year: 2025,
-    journal: "Islamic Green Finance",
-    description:
-      " Chapitre 14 |15 pages -Chapitre sur le financement vert à travers les Awqaf.",
-    shortDescription:
-      "Chapitre 14 |15 pages - Chapitre sur la finance verte basée sur les Awqaf.",
-    tags: ["Finance verte", "Awqaf", "Finance islamique"],
-    hasContent: true,
-    hasPdf: false,
-    pdfUrl: "",
-    link: "https://doi.org/10.4324/9781032672946",
-    isbn: "",
-  },
+
   {
     id: 6,
     type: "publication",

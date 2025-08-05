@@ -137,10 +137,10 @@ export function ContactPage({
               >
                 {t("contact_intro_text")}
               </p>
-              <button
-                onClick={() =>
-                  window.open("YOUR_GOOGLE_FORM_LINK_HERE", "_blank")
-                }
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfficDDV3HWtqHyi8MveHcGCgAwtV7MLfEETwvzBHiqVWXGbA/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`w-full flex items-center justify-center gap-2 px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-medium transition-colors text-sm sm:text-base ${
                   theme === "dark"
                     ? "bg-green-700 text-white hover:bg-green-600"
@@ -150,7 +150,7 @@ export function ContactPage({
               >
                 <Send className="w-4 h-4" />
                 {t("contact_button_text")}
-              </button>
+              </a>
             </div>
           </div>
         </div>

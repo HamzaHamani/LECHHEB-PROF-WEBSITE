@@ -3,7 +3,7 @@ export const responsibilities = [
     id: 1,
     type: "responsibility",
     title: "Membre élu du Conseil de l’établissement",
-    period: "2015 - 2017, 2020 - 2023",
+    period: "2015 - 2017 | 2020 - 2023",
     description:
       "Élu par les pairs pour représenter le corps professoral au sein du Conseil de l’établissement. Participation active aux décisions stratégiques relatives à la gestion académique, pédagogique et administrative de la faculté.",
     details: [
@@ -16,7 +16,7 @@ export const responsibilities = [
     id: 2,
     type: "responsibility",
     title: "Membre de la Commission pédagogique",
-    period: "2015 - 2017, 2020 - 2023",
+    period: "2015 - 2017 | 2020 - 2023",
     description:
       "Membre désigné de la commission pédagogique émanant du Conseil de l’établissement, contribuant activement à l’amélioration continue des programmes de formation et à la qualité de l’enseignement.",
     details: [
@@ -147,47 +147,7 @@ export const responsibilities = [
       "Contribution à l’évolution du contenu du master",
     ],
   },
-  {
-    id: 12,
-    type: "responsibility",
-    title: "Membre d’une commission spéciale de recrutement",
-    period: "Années diverses",
-    description:
-      "Participation à des commissions spéciales de recrutement académique ou administratif, en lien avec les besoins des établissements universitaires.",
-    details: [
-      "Évaluation des candidatures",
-      "Participation aux délibérations",
-      "Respect des critères de transparence et de mérite",
-    ],
-  },
-  {
-    id: 13,
-    type: "responsibility",
-    title:
-      "Membre du jury de recrutement des Administrateurs 2ème Grade – FSJESK",
-    period: "10 avril 2017",
-    description:
-      "Participation au jury de sélection pour le recrutement d’administrateurs au sein de la Faculté des Sciences Juridiques, Économiques et Sociales de Kénitra.",
-    details: [
-      "Examen des dossiers administratifs",
-      "Entretien des candidats",
-      "Notation et classement final",
-    ],
-  },
-  {
-    id: 14,
-    type: "responsibility",
-    title:
-      "Membre du jury de recrutement de Professeurs de l’Enseignement Supérieur – FLSHK",
-    period: "28 octobre 2021",
-    description:
-      "Participation à la sélection de deux enseignants-chercheurs en Sciences Économiques et Gestion pour la Faculté des Lettres et des Sciences Humaines de Kénitra.",
-    details: [
-      "Analyse des publications scientifiques des candidats",
-      "Évaluation des aptitudes pédagogiques et de recherche",
-      "Délibérations collégiales pour la sélection finale",
-    ],
-  },
+
   {
     id: 15,
     type: "responsibility",

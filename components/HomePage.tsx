@@ -56,45 +56,58 @@ export function HomePage({
         </p>
 
         {/* Academic Links */}
-        <div className="flex justify-center gap-4 mb-4 sm:mb-6">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-4 sm:mb-6">
           <a
             href="https://scholar.google.com/citations?user=aja0o2YAAAAJ&hl=fr"
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center gap-2 px-3 py-2 rounded-lg border transition-colors text-sm ${
+            className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg border transition-colors text-xs sm:text-sm ${
               theme === "dark"
                 ? "border-gray-600 text-gray-300 hover:bg-gray-800"
                 : "border-gray-300 text-gray-700 hover:bg-gray-50"
             }`}
           >
-            <ExternalLink className="w-4 h-4" />
+            <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
             {t("google_scholar")}
           </a>
           <a
             href="https://orcid.org/0009-0009-1159-2543"
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center gap-2 px-3 py-2 rounded-lg border transition-colors text-sm ${
+            className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg border transition-colors text-xs sm:text-sm ${
               theme === "dark"
                 ? "border-gray-600 text-gray-300 hover:bg-gray-800"
                 : "border-gray-300 text-gray-700 hover:bg-gray-50"
             }`}
           >
-            <ExternalLink className="w-4 h-4" />
+            <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
             {t("orcid")}
           </a>
           <a
             href="https://www.youtube.com/@lechhebhouda"
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center gap-2 px-3 py-2 rounded-lg border transition-colors text-sm ${
+            className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg border transition-colors text-xs sm:text-sm ${
               theme === "dark"
                 ? "border-gray-600 text-gray-300 hover:bg-gray-800"
                 : "border-gray-300 text-gray-700 hover:bg-gray-50"
             }`}
           >
-            <ExternalLink className="w-4 h-4" />
+            <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
             YouTube
+          </a>
+          <a
+            href="https://www.youtube.com/@lechhebhouda"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg border transition-colors text-xs sm:text-sm ${
+              theme === "dark"
+                ? "border-gray-600 text-gray-300 hover:bg-gray-800"
+                : "border-gray-300 text-gray-700 hover:bg-gray-50"
+            }`}
+          >
+            <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
+            LinkedIn
           </a>
         </div>
 
@@ -258,27 +271,50 @@ export function HomePage({
           {t("teaching_title")}
         </h2>
 
-        {displayedResponsibilities.map((resp, index) => (
-          <div key={resp.id}>
-            <div className="mb-4 sm:mb-6">
-              <p className="font-medium text-sm sm:text-base">{resp.title}</p>
-              <p
-                className={`text-xs sm:text-sm ${
-                  theme === "dark" ? "text-gray-400" : "text-gray-600"
-                }`}
-              >
-                {resp.period}
-              </p>
-              <p
-                className={`text-sm sm:text-base mt-1 ${
-                  theme === "dark" ? "text-gray-400" : "text-gray-600"
-                }`}
-              >
-                {resp.description}
-              </p>
+        {[...responsibilities]
+          .sort((a, b) => {
+            // Helper to extract the latest end year from a period string
+            // Handles multiple periods like "2015 - 2017 | 2020 - 2023"
+            const getLatestEndYear = (period: string) => {
+              const periods = period.split("|").map((p) => p.trim());
+              let maxYear = 0;
+              for (const p of periods) {
+                const match = p.match(/(\d{4})\s*-\s*(\d{4}|présent|present)/i);
+                if (!match) continue;
+                let endYear;
+                if (match[2].toLowerCase().startsWith("pr")) {
+                  endYear = 9999;
+                } else {
+                  endYear = parseInt(match[2], 10);
+                }
+                if (endYear > maxYear) maxYear = endYear;
+              }
+              return maxYear;
+            };
+            return getLatestEndYear(b.period) - getLatestEndYear(a.period);
+          })
+          .slice(0, showAllResponsibilities ? responsibilities.length : 5)
+          .map((resp) => (
+            <div key={resp.id}>
+              <div className="mb-4 sm:mb-6">
+                <p className="font-medium text-sm sm:text-base">{resp.title}</p>
+                <p
+                  className={`text-xs sm:text-sm ${
+                    theme === "dark" ? "text-gray-400" : "text-gray-600"
+                  }`}
+                >
+                  {resp.period}
+                </p>
+                <p
+                  className={`text-sm sm:text-base mt-1 ${
+                    theme === "dark" ? "text-gray-400" : "text-gray-600"
+                  }`}
+                >
+                  {resp.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
 
         {responsibilities.length > 5 && (
           <div className="text-center mt-6">
@@ -339,21 +375,35 @@ export function HomePage({
                 ISBN/DOI: {prod.isbn}
               </p>
             )}
-            {prod.link && (
-              <div className="text-green-600 mt-2">
+            <div className="mt-2">
+              {prod.link ? (
                 <a
                   href={prod.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-sm sm:text-base flex items-center gap-1"
+                  className="text-green-600 hover:underline text-sm sm:text-base flex items-center gap-1"
                 >
                   <ExternalLink className="w-3 h-3" />
                   {language === "fr"
                     ? "Accéder à la publication"
                     : "Access publication"}
                 </a>
-              </div>
-            )}
+              ) : (
+                <span
+                  className="text-gray-400 text-sm sm:text-base flex items-center gap-1 cursor-not-allowed select-none"
+                  title={
+                    language === "fr"
+                      ? "Lien externe non disponible"
+                      : "External link not available"
+                  }
+                >
+                  <ExternalLink className="w-3 h-3" />
+                  {language === "fr"
+                    ? "Accéder à la publication"
+                    : "Access publication"}
+                </span>
+              )}
+            </div>
           </div>
         ))}
       </section>
@@ -419,7 +469,9 @@ export function HomePage({
                   className="text-green-600 hover:underline text-sm sm:text-base flex items-center gap-1"
                 >
                   <ExternalLink className="w-3 h-3" />
-                  {language === "fr" ? "Lien externe" : "External link"}
+                  {language === "fr"
+                    ? "Accéder à la publication"
+                    : "Access publication"}
                 </a>
               ) : (
                 <span

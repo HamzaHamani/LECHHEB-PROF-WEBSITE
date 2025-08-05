@@ -21,80 +21,6 @@ interface Translations {
 }
 
 export const translations: Translations = {
-  fr: {
-    title: "Dr. Houda LECHHEB",
-    subtitle: "Professeure d'Enseignement Supérieur",
-    university: "Université Ibn Tofail",
-    date: "Décembre 2024",
-    nav_home: "Accueil",
-    nav_about: "À Propos",
-    nav_teaching: "Responsabilités Pédagogiques",
-    nav_production: "Production Scientifique",
-    nav_events: "Évènements Académiques",
-    nav_research: "Publications Scientifiques",
-    nav_contact: "Contact",
-    resume_title: "Résumé",
-    resume_text:
-      "Professeure d'Enseignement Supérieur à l'Université Ibn Tofail, spécialisée en sciences économiques et politiques publiques. Experte en évaluation d'impact des politiques publiques, économie de la santé et développement économique. Membre de AMPP (l'Association Marocaine des Politiques Publiques), AMSE (l'Association Marocaine des Sciences Économiques) et MEEA (Middle East Economic Association). Avec plus de 13 ans d'expérience dans la recherche et l'enseignement, elle a contribué significativement à l'avancement des connaissances en économie appliquée et à la formation de chercheurs.",
-    toc_title: "Table des matières",
-    toc_expertise: "Domaines d'expertise",
-    toc_teaching: "Responsabilités Pédagogiques",
-    toc_production: "Production Scientifique",
-    toc_research: "Publications Scientifiques",
-    toc_events: "Évènements passés",
-    toc_contact: "Informations de contact",
-    expertise_title: "1. Domaines d'expertise",
-    expertise_ai: "Évaluation d'Impact des Politiques Publiques",
-    expertise_nlp: "Économie de la Santé",
-    expertise_rl: "Économie du Développement",
-    expertise_ethics: "Économie Monétaire et Financière",
-    expertise_vision: "Management et Qualité",
-    teaching_title: "2. Responsabilités Pédagogiques",
-    teaching_intro:
-      "Responsabilités académiques et pédagogiques à l'Université Ibn Tofail (2015-2024).",
-    teaching_desc:
-      "Coordination de programmes, participation aux conseils d'établissement, responsabilité de modules et encadrement doctoral.",
-    production_title: "3. Production Scientifique",
-    production_intro:
-      "Ouvrages pédagogiques et contributions scientifiques majeures.",
-    research_title: "4. Publications Scientifiques",
-    research_intro:
-      "Publications dans des revues nationales et internationales indexées.",
-    recent_publications: "Publications récentes",
-    events_title: "5. Évènements passés",
-    contact_title: "6. Informations de contact",
-    email: "Email:",
-    office: "Bureau:",
-    address: "Adresse:",
-    office_hours: "Heures de permanence:",
-    view_article: "Voir l'article | PDF",
-    footer_rights: "Tous droits réservés.",
-    footer_updated: "Dernière mise à jour: Politique de confidentialité",
-    contact_page_title: "Formulaire de Contact",
-    back_to_home: "← Retour à l'accueil",
-    contact_form_name: "Nom complet",
-    contact_form_email: "Adresse email",
-    contact_form_subject: "Sujet",
-    contact_form_message: "Message",
-    contact_form_send: "Envoyer le message",
-    article_content: "Contenu de l'article",
-    pdf_viewer: "Visualiseur PDF",
-    course_materials: "Matériel de cours",
-    download_pdf: "Télécharger PDF",
-    view_course: "Voir le cours",
-    view_responsibility: "Voir les détails",
-    view_production: "Voir la production",
-    menu: "Menu",
-    close_menu: "Fermer le menu",
-    show_all: "Voir tout",
-    show_less: "Voir moins",
-    google_scholar: "Google Scholar",
-    orcid: "ORCID",
-    contact_intro_text:
-      "Si vous avez des questions ou souhaitez collaborer avec moi, n'hésitez pas à me contacter via le formulaire ci-dessous :",
-    contact_button_text: "Contactez-moi",
-    contact_form_title: "Formulaire de Contact",
-  },
   en: {
     title: "Dr. Houda LECHHEB",
     subtitle: "Professor of Higher Education",
@@ -109,7 +35,7 @@ export const translations: Translations = {
     nav_contact: "Contact",
     resume_title: "Resume",
     resume_text:
-      "Professor of Higher Education at Ibn Tofail University, specialized in economic sciences and public policies. Expert in impact evaluation of public policies, health economics and economic development. Member of AMPP (Moroccan Association of Public Policies), AMSE (Moroccan Association of Economic Sciences) and MEEA (Middle East Economic Association). With over 13 years of experience in research and teaching, she has significantly contributed to the advancement of knowledge in applied economics and researcher training.",
+      "Professor of Higher Education at Ibn Tofail University, I lead the Economics, Finance, Management and Innovation laboratory, specializing in economic sciences and public policies. I am an expert in public policy impact evaluation, Harvard graduate, and a member of the experts of the CNRST (National Center for Scientific and Technical Research) in the fields of health economics, finance, behavioral and development economics. An active member of several professional associations — AMPP (Moroccan Association of Public Policies), AMSE (Moroccan Association of Economic Sciences), and MEEA (Middle East Economic Association) — I have over 12 years of experience in the banking sector and more than 14 years of commitment to scientific research and higher education.",
     toc_title: "Table of Contents",
     toc_expertise: "Areas of Expertise",
     toc_teaching: "Pedagogical Responsibilities",
@@ -118,7 +44,7 @@ export const translations: Translations = {
     toc_events: "Past Events",
     toc_contact: "Contact Information",
     expertise_title: "1. Areas of Expertise",
-    expertise_ai: "Impact Evaluation of Public Policies",
+    expertise_ai: "Public Policy Impact Evaluation",
     expertise_nlp: "Health Economics",
     expertise_rl: "Development Economics",
     expertise_ethics: "Monetary and Financial Economics",
@@ -127,14 +53,14 @@ export const translations: Translations = {
     teaching_intro:
       "Academic and pedagogical responsibilities at Ibn Tofail University (2015-2024).",
     teaching_desc:
-      "Program coordination, participation in establishment councils, module responsibility and doctoral supervision.",
+      "Program coordination, participation in institutional councils, module responsibility, and doctoral supervision.",
     production_title: "3. Scientific Production",
-    production_intro: "Pedagogical works and major scientific contributions.",
+    production_intro: "Educational books and major scientific contributions.",
     research_title: "4. Scientific Publications",
     research_intro:
       "Publications in indexed national and international journals.",
     recent_publications: "Recent Publications",
-    events_title: "5. Past Events",
+    events_title: "5. Scientific Events",
     contact_title: "6. Contact Information",
     email: "Email:",
     office: "Office:",
@@ -168,16 +94,92 @@ export const translations: Translations = {
     contact_button_text: "Contact Me",
     contact_form_title: "Contact Form",
   },
+  fr: {
+    title: "Dr. Houda LECHHEB",
+    subtitle: "Professeure d'Enseignement Supérieur",
+    university: "Université Ibn Tofail",
+    date: "Décembre 2024",
+    nav_home: "Accueil",
+    nav_about: "À Propos",
+    nav_teaching: "Responsabilités Pédagogiques",
+    nav_production: "Production Scientifique",
+    nav_events: "Évènements Académiques",
+    nav_research: "Publications Scientifiques",
+    nav_contact: "Contact",
+    resume_title: "Résumé",
+    resume_text:
+      "Professeure d’Enseignement Supérieur à l’Université Ibn Tofail, je dirige le laboratoire Economics, Finance, Management and Innovation, avec une spécialisation en sciences économiques et en politiques publiques. Je suis experte en évaluation de l’impact des politiques publiques, diplômée de Harvard, et membre des experts de la  CNRST (Centre National pour la recherche Scientifique et Technique ) dans les domaines de l’économie de la santé la finance, l’économie comportementale et du développement économique. Membre active de plusieurs associations professionnelles — AMPP (Association Marocaine des Politiques Publiques), AMSE (Association Marocaine des Sciences Économiques) et MEEA (Middle East Economic Association)  je cumule plus de 12 ans d’expérience dans le secteur bancaire et plus de 14 ans d’engagement dans  la recherche scientifique et l’enseignement supérieur.",
+    toc_title: "Table des matières",
+    toc_expertise: "Domaines d'expertise",
+    toc_teaching: "Responsabilités Pédagogiques",
+    toc_production: "Production Scientifique",
+    toc_research: "Publications Scientifiques",
+    toc_events: "Évènements passés",
+    toc_contact: "Informations de contact",
+    expertise_title: "1. Domaines d'expertise",
+    expertise_ai: "Évaluation d'Impact des Politiques Publiques",
+    expertise_nlp: "Économie de la Santé",
+    expertise_rl: "Économie du Développement",
+    expertise_ethics: "Économie Monétaire et Financière",
+    expertise_vision: "Management et Qualité",
+    teaching_title: "2. Responsabilités Pédagogiques",
+    teaching_intro:
+      "Responsabilités académiques et pédagogiques à l'Université Ibn Tofail (2015-2024).",
+    teaching_desc:
+      "Coordination de programmes, participation aux conseils d'établissement, responsabilité de modules et encadrement doctoral.",
+    production_title: "3. Production Scientifique",
+    production_intro:
+      "Ouvrages pédagogiques et contributions scientifiques majeures.",
+    research_title: "4. Publications Scientifiques",
+    research_intro:
+      "Publications dans des revues nationales et internationales indexées.",
+    recent_publications: "Publications récentes",
+    events_title: "5. Événements scientifiques",
+    contact_title: "6. Informations de contact",
+    email: "Email:",
+    office: "Bureau:",
+    address: "Adresse:",
+    office_hours: "Heures de permanence:",
+    view_article: "Voir l'article | PDF",
+    footer_rights: "Tous droits réservés.",
+    footer_updated: "Dernière mise à jour: Politique de confidentialité",
+    contact_page_title: "Formulaire de Contact",
+    back_to_home: "← Retour à l'accueil",
+    contact_form_name: "Nom complet",
+    contact_form_email: "Adresse email",
+    contact_form_subject: "Sujet",
+    contact_form_message: "Message",
+    contact_form_send: "Envoyer le message",
+    article_content: "Contenu de l'article",
+    pdf_viewer: "Visualiseur PDF",
+    course_materials: "Matériel de cours",
+    download_pdf: "Télécharger PDF",
+    view_course: "Voir le cours",
+    view_responsibility: "Voir les détails",
+    view_production: "Voir la production",
+    menu: "Menu",
+    close_menu: "Fermer le menu",
+    show_all: "Voir tout",
+    show_less: "Voir moins",
+    google_scholar: "Google Scholar",
+    orcid: "ORCID",
+    contact_intro_text:
+      "Si vous avez des questions ou souhaitez collaborer avec moi, n'hésitez pas à me contacter via le formulaire ci-dessous :",
+    contact_button_text: "Contactez-moi",
+    contact_form_title: "Formulaire de Contact",
+  },
 };
 
 export default function AcademicWebsite() {
+  // Initialize with default values to avoid hydration mismatch
   const [language, setLanguage] = useState<Language>("fr");
   const [theme, setTheme] = useState<Theme>("light");
   const [currentPage, setCurrentPage] = useState<Page>("home");
   const [currentItem, setCurrentItem] = useState<any>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  // Load theme from localStorage on mount
+  // Load preferences from localStorage after hydration
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") as Theme;
     const savedLanguage = localStorage.getItem("language") as Language;
@@ -188,15 +190,24 @@ export default function AcademicWebsite() {
     if (savedLanguage) {
       setLanguage(savedLanguage);
     }
+
+    setIsLoaded(true);
   }, []);
 
-  // Apply theme to document
+  // Apply theme to document when theme changes
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+    if (isLoaded) {
+      document.documentElement.classList.toggle("dark", theme === "dark");
+      localStorage.setItem("theme", theme);
+    }
+  }, [theme, isLoaded]);
 
   // Save language preference
+  useEffect(() => {
+    if (isLoaded) {
+      localStorage.setItem("language", language);
+    }
+  }, [language, isLoaded]);
   useEffect(() => {
     localStorage.setItem("language", language);
   }, [language]);

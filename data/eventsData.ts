@@ -1,7 +1,8 @@
 export const pastEvents = [
   {
     id: 1,
-    title: "Colloque International - Politiques publiques et évidences scientifiques",
+    title:
+      "Colloque International - Politiques publiques et évidences scientifiques",
     date: "23 Novembre 2023",
     location: "Kenitra, Maroc",
     description:
@@ -15,15 +16,6 @@ export const pastEvents = [
     location: "Laboratoire LESPP, Kenitra",
     description:
       "Organisation du workshop sur l'économie de la santé et la recherche scientifique au Maroc, rassemblant chercheurs et praticiens.",
-    role: "Organisatrice",
-  },
-  {
-    id: 3,
-    title: "Séminaire Coopération Maroco-Coréenne",
-    date: "11-18 Mai 2024",
-    location: "Laboratoire LESPP, Kenitra",
-    description:
-      "Série de séminaires sur la coopération maroco-coréenne comme levier de développement afro-asiatique, couvrant croissance et changement climatique.",
     role: "Organisatrice",
   },
   {
@@ -89,4 +81,4 @@ export const pastEvents = [
       "Responsable d'organisation du colloque international sur l'impact de la délocalisation sur les pays en voie de développement.",
     role: "Organisatrice principale",
   },
-]
+];

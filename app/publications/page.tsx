@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { ExternalLink, ArrowLeft } from "lucide-react";
+import { ExternalLink, ArrowLeft, Moon, Sun } from "lucide-react";
 import {
   generateStructuredData,
   generatePublicationStructuredData,
@@ -18,7 +18,7 @@ const translations = {
     back_to_home: "← Retour à l'accueil",
     filter_by_category: "Filtrer par catégorie :",
     all_categories: "Toutes les catégories",
-    external_link: "Lien externe",
+    external_link: "Accéder à la publication",
     total_publications: "publications au total",
   },
   en: {
@@ -30,18 +30,21 @@ const translations = {
     back_to_home: "← Back to Home",
     filter_by_category: "Filter by category:",
     all_categories: "All categories",
-    external_link: "External link",
+    external_link: "Access publication",
     total_publications: "total publications",
   },
 };
 
 export default function PublicationsPage() {
+  // Initialize with default values to avoid hydration mismatch
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [language, setLanguage] = useState<"fr" | "en">("fr");
   const [filter, setFilter] = useState<
     "all" | "ouvrages" | "national" | "scopus" | "international"
   >("all");
+  const [isLoaded, setIsLoaded] = useState(false);
 
+  // Load preferences from localStorage after hydration
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
     const savedLanguage = localStorage.getItem("language") as
@@ -51,9 +54,19 @@ export default function PublicationsPage() {
 
     if (savedTheme) setTheme(savedTheme);
     if (savedLanguage) setLanguage(savedLanguage);
+    setIsLoaded(true);
+  }, []);
 
+  // Apply theme to document when theme changes
+  useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
   }, [theme]);
+
+  // Save language preference when language changes
+  useEffect(() => {
+    localStorage.setItem("language", language);
+  }, [language]);
 
   const t = (key: string): string => {
     return (
@@ -61,6 +74,14 @@ export default function PublicationsPage() {
         key as keyof (typeof translations)[typeof language]
       ] || key
     );
+  };
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === "fr" ? "en" : "fr");
   };
 
   const CATEGORY_TYPES = [
@@ -136,6 +157,51 @@ export default function PublicationsPage() {
             '"Times New Roman", "Liberation Serif", "Nimbus Roman No9 L", serif',
         }}
       >
+        {/* Theme and Language Toggle */}
+        <div className="fixed top-4 right-4 flex gap-2 z-50">
+          {/* Theme Toggle */}
+          <button
+            onClick={toggleTheme}
+            className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full border transition-all duration-300 shadow-lg ${
+              theme === "dark"
+                ? "bg-gray-800 border-gray-600 text-gray-200 hover:bg-gray-700 hover:shadow-xl"
+                : "bg-white border-gray-300 text-gray-700 hover:bg-gray-50 hover:shadow-xl"
+            }`}
+            title={
+              theme === "light" ? "Switch to dark mode" : "Switch to light mode"
+            }
+            aria-label={
+              theme === "light" ? "Switch to dark mode" : "Switch to light mode"
+            }
+          >
+            <div className="flex items-center justify-center">
+              {theme === "light" ? (
+                <Moon className="w-3 h-3 sm:w-4 sm:h-4" />
+              ) : (
+                <Sun className="w-3 h-3 sm:w-4 sm:h-4" />
+              )}
+            </div>
+          </button>
+
+          {/* Language Toggle */}
+          <button
+            onClick={toggleLanguage}
+            className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full border transition-all duration-300 shadow-lg ${
+              theme === "dark"
+                ? "bg-gray-800 border-gray-600 text-gray-200 hover:bg-gray-700 hover:shadow-xl"
+                : "bg-white border-gray-300 text-gray-700 hover:bg-gray-50 hover:shadow-xl"
+            }`}
+            title={`Switch to ${language === "fr" ? "English" : "French"}`}
+            aria-label={`Switch to ${language === "fr" ? "English" : "French"}`}
+          >
+            <div className="flex items-center justify-center">
+              <span className="text-xs font-bold">
+                {language.toUpperCase()}
+              </span>
+            </div>
+          </button>
+        </div>
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
           {/* Header */}
           <header className="text-center mb-8">
@@ -240,8 +306,8 @@ export default function PublicationsPage() {
                               <span key={`${tag}-${index}`}>{tag}</span>
                             ))}
                           </div>
-                          {pub.link && (
-                            <div className="flex gap-4 mt-2">
+                          <div className="flex gap-4 mt-2">
+                            {pub.link ? (
                               <a
                                 href={pub.link}
                                 target="_blank"
@@ -251,8 +317,20 @@ export default function PublicationsPage() {
                                 <ExternalLink className="w-3 h-3" />
                                 {t("external_link")}
                               </a>
-                            </div>
-                          )}
+                            ) : (
+                              <span
+                                className="text-gray-400 dark:text-gray-500 text-sm sm:text-base flex items-center gap-1 cursor-not-allowed"
+                                title={
+                                  language === "fr"
+                                    ? "Publication non disponible"
+                                    : "Publication not available"
+                                }
+                              >
+                                <ExternalLink className="w-3 h-3" />
+                                {t("external_link")}
+                              </span>
+                            )}
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -295,8 +373,8 @@ export default function PublicationsPage() {
                           <span key={`${tag}-${index}`}>{tag}</span>
                         ))}
                       </div>
-                      {pub.link && (
-                        <div className="flex gap-4 mt-2">
+                      <div className="flex gap-4 mt-2">
+                        {pub.link ? (
                           <a
                             href={pub.link}
                             target="_blank"
@@ -306,8 +384,20 @@ export default function PublicationsPage() {
                             <ExternalLink className="w-3 h-3" />
                             {t("external_link")}
                           </a>
-                        </div>
-                      )}
+                        ) : (
+                          <span
+                            className="text-gray-400 dark:text-gray-500 text-sm sm:text-base flex items-center gap-1 cursor-not-allowed"
+                            title={
+                              language === "fr"
+                                ? "Publication non disponible"
+                                : "Publication not available"
+                            }
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            {t("external_link")}
+                          </span>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
